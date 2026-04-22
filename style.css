@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+}
+
+header{
+    background-color: #D45D37;
+    color: whitesmoke;
+    text-align: center;
+    padding: 4px;
+}
+
+/* Navigation styles */
+nav{
+    border-bottom: 1px solid #D45D37;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 20px;
+    background-color: white;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+nav > button{
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 40px;
+    margin: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: grey;
+    font-size: 18px;
+}
+
+nav>ul>li:hover{
+    border-bottom: #D45D37 solid 2px;
+    a{
+        color: #D45D37;
+    }
+}
+
+/* HERO STYLES */
+.hero{
+    display: flex;
+    justify-content: space-around;
+    padding: 150px;
+}
+
+img{
+    height: 60vh;
+    border: 1px dashed #D45D37;
+    padding: 12px;
+    border-radius: 24px;
+}
+
+.location{
+    display: flex;
+    color: grey;
+    width: 100%;
+    margin: 24px;
+}
+
+.hero>aside>h1{
+    font-size: 62px;
+    margin: 16px;
+    border-left: 3px solid #D45D37;
+    padding-left: 12px;
+    span{
+        color: #D45D37;
+        font-style: italic;
+    }
+}
+
+.hero>aside>p{
+    margin: 16px;
+    color: grey;
+}
+
+.cta{
+    display: flex;
+    gap: 12px;
+    button{
+        padding: 10px 20px;
+        border: 1px solid grey;
+        border-radius: 40px;
+    }
+}
+
+.cta>button:first-child{
+    background-color: black;
+    color: white;
+}
+
+/* STYLES FOR ABOUT ME */
+.container{
+    border: 1px solid darkblue;
+    margin: 12px;
+    height: 90vh;
+    background-image: url(./images/End\ of\ Year\ Newsletter.jpg);
+    background-position: center;
+    background-size: contain;
+    font-size: 45px;
+    color: white;
+    padding: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    a{
+        background-color: #D45D37;
+        padding: 20px 40px;
+        color: white;
+        margin: 40px;
+        border-radius: 50px;
+    }
+}
+
+.title{
+    text-align: center;
+    margin: 40px 0;
+}
+
+.services-items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 16px 150px;
+}
+
+.service-item{
+    background-color: grey;
+    margin: 12px;
+    padding: 16px;
+    border-radius: 12px;
+
+    h3{
+        color: whitesmoke;
+        border-left: 16px solid orange;
+        padding: 12px 6px;
+        margin-bottom: 16px;
+
+    }
+
+    p{
+        font-size: 24px;
+        font-weight:100;
+
+    }
+}
+
+.item{
+    position: relative;
+    width: 25vw;
+}
+
+.discount{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/* FOOTER STYLES */
+footer{
+    background-color: #D45D37;
+    padding: 40px 150px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
