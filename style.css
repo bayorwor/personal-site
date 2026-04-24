@@ -57,14 +57,16 @@ nav>ul>li:hover{
     display: flex;
     justify-content: space-around;
     padding: 150px;
-}
-
-img{
+    
+    img{
     height: 60vh;
     border: 1px dashed #D45D37;
     padding: 12px;
     border-radius: 24px;
 }
+}
+
+
 
 .location{
     display: flex;
@@ -179,4 +181,17 @@ footer{
     display: flex;
     justify-content: space-between;
     color: white;
+}
+
+
+#products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.card{
+    background-color: #dedede;
+    padding: 12px;
+    border-radius: 16px;
 }

@@ -1,21 +1,32 @@
-let logo = document.getElementById("logo")
 
-let btnGetIntouch= document.getElementById("get-intouch")
+const productsContainer= document.getElementById("products")
+const todosContainer= document.getElementById("todos")
 
-let counter=0
+// productsContainer.innerHTML="<h1>We are learning backend dev't</h1>"
 
-
-function increaseCounter(){
-    counter=counter+1
-    if(counter%2==0){
-        logo.style="color:#d45d37"
-    }else{
-        logo.style="color:#dedede"
+fetch("https://fakestoreapi.com/products")
+.then((res)=>res.json()).then((products)=>{
+    for(let product of products){
+        productsContainer.innerHTML+=`
+        <div class='card'>
+            <h1>${product.title}</h1>
+            <img src=${product.image} />
+            <p>${product.price}</p>
+        </div>
+        `
     }
-    logo.textContent=counter
-}
+})
 
-
-// btnGetIntouch.addEventListener("click",increaseCounter)
-
-setInterval(increaseCounter,1000)
+fetch("https://jsonplaceholder.typicode.com/todos",{
+    method:"GET"
+  
+})
+.then((res)=>res.json()).then((todos)=>{
+    for(let todo of todos){
+        todosContainer.innerHTML+=`
+        <div class='card'>
+            <h1>${todo.title}</h1>
+        </div>
+        `
+    }
+})
